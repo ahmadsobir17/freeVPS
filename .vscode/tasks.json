@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start n8n",
+      "type": "shell",
+      "command": "bash -lc 'set -a; source .env 2>/dev/null || true; set +a; n8n start'",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Stop n8n",
+      "type": "shell",
+      "command": "bash -lc \"pkill -f 'n8n start' || true\"",
+      "problemMatcher": []
+    }
+  ]
+}
